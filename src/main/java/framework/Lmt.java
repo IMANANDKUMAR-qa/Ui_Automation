@@ -42,11 +42,10 @@ public class Lmt {
 		return envData;
 	}
 
-	public static String getData(String key) {
+	public static Object getData(String key) {
 		String env = System.getProperty("Env");
 		String tenant = System.getProperty("Tenant");
-		System.out.println((env + "-------------------" + tenant));
-		String value = null;
+		Object value = null;
 		String file = env + "_" + tenant;
 		String userDir = System.getProperty("user.dir");
 		String filePath = userDir + "/src/test/java/testData/file.json".replace("file", file);
@@ -56,7 +55,7 @@ public class Lmt {
 
 			// Read a value from the JSON file using JSONPath
 			value = JsonPath.read(jsonFile, "$." + key);
-			System.out.println("Author of the first book: " + value);
+//			System.out.println("Key: "+ key +" Value: "+ value);
 
 			// Read a list of values
 //			List<String> titles = JsonPath.read(jsonFile, "$.batters.batter[2].id");

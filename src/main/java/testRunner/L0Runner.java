@@ -33,7 +33,6 @@ public class L0Runner {
 			Globalvariables.data = Lmt.getData(Env,Tenant);
 			String env1= System.getProperty("Env");
 			String tenant1=System.getProperty("Tenant");
-			System.out.println((env1 + "ANAND KUMAR ENV"+ tenant1));
       		ReadJsonFile.getData("batters.batter[0].id");
 			
 		}
