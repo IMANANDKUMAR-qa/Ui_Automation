@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="2" name="Failed suite [Suite]" verbose="0">
+  <parameter name="Tags" value="@ASD"/>
+  <test thread-count="2" name="Test1(failed)" verbose="0">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="testRunner.L0Runner$CucumberRunnerTests">
+        <methods>
+          <include name="setUpClass"/>
+          <include name="afterSuite"/>
+          <include name="beforeSuite"/>
+          <include name="runScenario" invocation-numbers="0"/>
+          <include name="tearDownClass"/>
+          <include name="afterMrthod"/>
+          <include name="beforeMrthod"/>
+        </methods>
+      </class> <!-- testRunner.L0Runner$CucumberRunnerTests -->
+    </classes>
+  </test> <!-- Test1(failed) -->
+  <test thread-count="2" name="Test2(failed)" verbose="0">
+    <parameter name="browser" value="edge"/>
+    <classes>
+      <class name="testRunner.L0Runner$CucumberRunnerTests">
+        <methods>
+          <include name="setUpClass"/>
+          <include name="afterSuite"/>
+          <include name="runScenario" invocation-numbers="0"/>
+          <include name="beforeSuite"/>
+          <include name="tearDownClass"/>
+          <include name="afterMrthod"/>
+          <include name="beforeMrthod"/>
+        </methods>
+      </class> <!-- testRunner.L0Runner$CucumberRunnerTests -->
+    </classes>
+  </test> <!-- Test2(failed) -->
+</suite> <!-- Failed suite [Suite] -->
