@@ -1,16 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite name="Suite" parallel="test" thread-count="2">
-<parameter name="Tags" value="${Tags}" />
-  <test thread-count="5" name="Test1">
-  <parameter name="browser" value="chrome" />
-    <classes>
-      <class name="testRunner.L0Runner"/>
-    </classes>
-  </test> <!-- Test -->
-   <test thread-count="5" name="Test2">
-   <parameter name="browser" value="edge" />
-    <classes>
-      <class name="testRunner.L0Runner"/>
-    </classes>
-  </test> <!-- Test -->
-</suite> <!-- Suite -->
+	<parameter name="Tags" value="${Tags}" />
+	<parameter name="Env" value="${Env}" />
+	<parameter name="Env" value="${Tenant}" />
+	<test thread-count="5" name="Test1">
+		<parameter name="browser" value="chrome" />
+		<classes>
+			<class name="testRunner.L0Runner" />
+		</classes>
+	</test> <!--
+	Test -->
+	<test thread-count="5" name="Test2">
+		<parameter name="browser" value="edge" />
+		<classes>
+			<class name="testRunner.L0Runner" />
+		</classes>
+	</test> <!--
+	Test -->
+</suite> <!--
+Suite -->

@@ -9,10 +9,12 @@ import org.json.JSONObject;
 
 public class Lmt {
 
-	public static LinkedHashMap<Object, Object> getData() {
+	public static LinkedHashMap<Object, Object> getData(String env,String tenant) {
 		LinkedHashMap<Object, Object> envData = new LinkedHashMap<Object, Object>();
-		String filePath = "C:\\Users\\ANAND KUMAR\\eclipse-workspace\\Ui_Automation\\src\\test\\java\\testData\\AUSUAT_QMSSANITY.json"; 
+		String file = env+"_"+tenant;
+		String filePath = "C:\\Users\\ANAND KUMAR\\eclipse-workspace\\Ui_Automation\\src\\test\\java\\testData\\file.json"; 
 		try {
+			filePath = filePath.replace("file", file);
 			BufferedReader reader = new BufferedReader(new FileReader(filePath));
 			StringBuilder jsonContent = new StringBuilder();
 			String line;
@@ -36,7 +38,4 @@ public class Lmt {
 		return envData;
 	}
 
-	public static void main(String[] args) {
-		getData();
-	}
 }
