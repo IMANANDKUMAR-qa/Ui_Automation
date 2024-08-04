@@ -25,8 +25,8 @@ public class L0Runner {
 		@Parameters({"Tags","Env","Tenant"})
 		public void beforeSuite(String tags,String Env,String Tenant) {
 			System.out.println(tags + "------------------------------");
-			System.setProperty("cucumber.options", "--tags " + tags);
-			System.setProperty("cucumber.tags", tags);			
+//			System.setProperty("cucumber.options", "--tags " + tags);
+//			System.setProperty("cucumber.tags", tags);			
 			System.setProperty("cucumber.filter.tags", tags);
 			Lmt.getData(Env,Tenant);
 		}

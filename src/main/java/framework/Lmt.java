@@ -12,7 +12,8 @@ public class Lmt {
 	public static LinkedHashMap<Object, Object> getData(String env,String tenant) {
 		LinkedHashMap<Object, Object> envData = new LinkedHashMap<Object, Object>();
 		String file = env+"_"+tenant;
-		String filePath = "C:\\Users\\ANAND KUMAR\\eclipse-workspace\\Ui_Automation\\src\\test\\java\\testData\\file.json"; 
+		String userDir=System.getProperty("user.dir");
+		String filePath = userDir+"/src/test/java/testData/AUSUAT_QMSSANITY.json"; 
 		try {
 			filePath = filePath.replace("file", file);
 			BufferedReader reader = new BufferedReader(new FileReader(filePath));
