@@ -8,6 +8,7 @@ import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Parameters;
 import framework.Lmt;
+import framework.ReadJsonFile;
 import framework.Base;
 import framework.Globalvariables;
 import framework.Lmt;
@@ -30,6 +31,10 @@ public class L0Runner {
 //			System.setProperty("cucumber.tags", tags);			
 			System.setProperty("cucumber.filter.tags", tags);
 			Globalvariables.data = Lmt.getData(Env,Tenant);
+			String env1= System.getProperty("Env");
+			String tenant1=System.getProperty("Tenant");
+			System.out.println((env1 + "ANAND KUMAR ENV"+ tenant1));
+      		ReadJsonFile.getData("batters.batter[0].id");
 			
 		}
 

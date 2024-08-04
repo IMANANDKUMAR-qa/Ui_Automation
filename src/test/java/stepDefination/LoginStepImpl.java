@@ -6,6 +6,7 @@ import org.openqa.selenium.interactions.Actions;
 
 import framework.Base;
 import framework.Globalvariables;
+import framework.Lmt;
 import framework.Z;
 import io.cucumber.java.en.Given;
 
@@ -13,7 +14,7 @@ public class LoginStepImpl extends Base{
 
 	@Given("I am google page")
 	public void i_am_google_page() {
-		String url = Globalvariables.data.get("URL").toString();
+		String url = Lmt.getData("URL");
 		System.out.println("ANAND Kumar " +url+ "_____________________________");
 		driver.get(url);
 //		Z.click("//*[@id=\"content\"]/div/div[1]/div/ul/li[1]/a/div");
