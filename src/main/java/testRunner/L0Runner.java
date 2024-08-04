@@ -1,13 +1,15 @@
 package testRunner;
 
+import org.checkerframework.checker.units.qual.g;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Parameters;
-
+import framework.Lmt;
 import framework.Base;
+import framework.Globalvariables;
 import framework.Lmt;
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
@@ -24,11 +26,11 @@ public class L0Runner {
 		@BeforeSuite
 		@Parameters({"Tags","Env","Tenant"})
 		public void beforeSuite(String tags,String Env,String Tenant) {
-			System.out.println(tags + "------------------------------");
 //			System.setProperty("cucumber.options", "--tags " + tags);
 //			System.setProperty("cucumber.tags", tags);			
 			System.setProperty("cucumber.filter.tags", tags);
-			Lmt.getData(Env,Tenant);
+			Globalvariables.data = Lmt.getData(Env,Tenant);
+			
 		}
 
 		@Parameters("browser")

@@ -9,8 +9,8 @@ import org.json.JSONObject;
 
 public class Lmt {
 
-	public static LinkedHashMap<Object, Object> getData(String env,String tenant) {
-		LinkedHashMap<Object, Object> envData = new LinkedHashMap<Object, Object>();
+	public static LinkedHashMap<String, Object> getData(String env,String tenant) {
+		LinkedHashMap<String, Object> envData = new LinkedHashMap<String, Object>();
 		String file = env+"_"+tenant;
 		String userDir=System.getProperty("user.dir");
 		String filePath = userDir+"/src/test/java/testData/AUSUAT_QMSSANITY.json"; 
@@ -30,7 +30,7 @@ public class Lmt {
 			// Print JSON values (example for a simple JSON object)
 			for (String key : jsonObject.keySet()) {
 				System.out.println(key + ": " + jsonObject.get(key));
-				envData.put(key, jsonObject.get(key));
+				envData.put(key.toString(), jsonObject.get(key));
 			}
 
 		} catch (IOException e) {

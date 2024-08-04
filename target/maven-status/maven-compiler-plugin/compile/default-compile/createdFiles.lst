@@ -4,6 +4,7 @@ framework\Z.class
 framework\Lmt.class
 framework\ReadFilefromJsonREsponse.class
 testRunner\L0Runner.class
+framework\Globalvariables.class
 framework\Base.class
 framework\readJsonasString.class
 testRunner\L0Runner$CucumberRunnerTests.class
