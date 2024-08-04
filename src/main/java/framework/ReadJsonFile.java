@@ -7,9 +7,10 @@
 	
 	public class ReadJsonFile {
 	
-		public static void main(String[] args) {
+		public static void ReadJsonFile(String env,String tenant) {
+			String file = env+"_"+tenant;
 			String userDir=System.getProperty("user.dir");
-			String file = userDir+"/src/test/java/testData/AUSUAT_QMSSANITY.json";
+			String filePath = userDir+"/src/test/java/testData/file.json".replace(file, file); 
 			try {
 				// Load JSON file
 				File jsonFile = new File(file);
@@ -25,5 +26,7 @@
 				e.printStackTrace();
 			}
 		}
+		
+		
 	
 	}
