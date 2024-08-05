@@ -9,6 +9,7 @@ import framework.Globalvariables;
 import framework.Lmt;
 import framework.Z;
 import io.cucumber.java.en.Given;
+import pageObject.LoginObj;
 
 public class LoginStepImpl extends Base{
 
@@ -21,11 +22,13 @@ public class LoginStepImpl extends Base{
 		 System.out.println(Lmt.getData("topping"));
 //		Z.click("//*[@id=\"content\"]/div/div[1]/div/ul/li[1]/a/div");
 //		Z.click("//*[@id=\"content\"]/div/div[1]/div/ul/li[1]/a/div");  
+		 Z.click(LoginObj.userName);
 		WebElement elemement = driver.findElement(By.xpath("ASDFGH"));
 		 Actions act = new Actions(driver);
 		 act.moveToElement(elemement).build().perform();
 		 act.clickAndHold(elemement).moveToElement(elemement).release();		
 		 act.keyDown("A");
+		
 
 	}
 

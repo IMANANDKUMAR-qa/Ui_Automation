@@ -25,16 +25,16 @@ public class L0Runner {
 	public class CucumberRunnerTests extends AbstractTestNGCucumberTests {
 
 		@BeforeSuite
-		@Parameters({"Tags","Env","Tenant"})
-		public void beforeSuite(String tags,String Env,String Tenant) {
+		@Parameters({ "Tags", "Env", "Tenant" })
+		public void beforeSuite(String tags, String Env, String Tenant) {
 //			System.setProperty("cucumber.options", "--tags " + tags);
 //			System.setProperty("cucumber.tags", tags);			
 			System.setProperty("cucumber.filter.tags", tags);
-			Globalvariables.data = Lmt.getData(Env,Tenant);
-			String env1= System.getProperty("Env");
-			String tenant1=System.getProperty("Tenant");
-      		ReadJsonFile.getData("batters.batter[0].id");
-			
+			Globalvariables.data = Lmt.getData(Env, Tenant);
+			String env1 = System.getProperty("Env");
+			String tenant1 = System.getProperty("Tenant");
+			ReadJsonFile.getData("batters.batter[0].id");
+
 		}
 
 		@Parameters("browser")
