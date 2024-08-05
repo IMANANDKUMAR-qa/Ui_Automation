@@ -36,10 +36,6 @@ public class Z extends Base {
 		
 	}
 	
-	public  void click(String xpath) {
-		waitForWebelement(xpath).click();
-		
-	}
 
 
 }

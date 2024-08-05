@@ -26,6 +26,7 @@ public class LoginStepImpl extends Base{
 		 act.moveToElement(elemement).build().perform();
 		 act.clickAndHold(elemement).moveToElement(elemement).release();		
 		 act.keyDown("A");
+
 	}
 
 }

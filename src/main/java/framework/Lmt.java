@@ -32,7 +32,6 @@ public class Lmt {
 
 			// Print JSON values (example for a simple JSON object)
 			for (String key : jsonObject.keySet()) {
-				System.out.println(key + ": " + jsonObject.get(key));
 				envData.put(key.toString(), jsonObject.get(key));
 			}
 
