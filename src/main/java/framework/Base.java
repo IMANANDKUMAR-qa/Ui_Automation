@@ -7,28 +7,36 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class Base {
 
-	public static WebDriver driver;
-	public String browser;
+    // ThreadLocal to ensure each thread has its own WebDriver instance
+    private static ThreadLocal<WebDriver> driver = new ThreadLocal<>();
 
+    // Method to get the driver for the current thread
+    public static WebDriver getDriver() {
+        return driver.get();
+    }
 
-	public static void browserSetup(String browser) {
-	
-		if (browser.equalsIgnoreCase("chrome")) {
-			driver = new ChromeDriver();
+    // Browser setup method
+    public static void browserSetup(String browser) {
+        WebDriver webDriver = null;
 
-		} else if (browser.equalsIgnoreCase("firefox")) {
-			driver = new FirefoxDriver();
-		}
-		
-		else if (browser.equalsIgnoreCase("edge")) {
-			driver = new EdgeDriver();
-		}
-		
-		
-	}
+        if (browser.equalsIgnoreCase("chrome")) {
+            webDriver = new ChromeDriver();
 
-	public static void tearDownAll() {
-		driver.quit();
+        } else if (browser.equalsIgnoreCase("firefox")) {
+            webDriver = new FirefoxDriver();
 
-	}
+        } else if (browser.equalsIgnoreCase("edge")) {
+            webDriver = new EdgeDriver();
+        }
+
+        driver.set(webDriver); // Set the WebDriver instance for the current thread
+    }
+
+    // Teardown method to quit the browser for the current thread
+    public static void tearDownAll() {
+        if (getDriver() != null) {
+            getDriver().quit();
+            driver.remove(); // Remove the WebDriver instance after quitting
+        }
+    }
 }

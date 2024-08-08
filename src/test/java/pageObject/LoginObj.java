@@ -13,9 +13,8 @@ public class LoginObj extends Base {
 	@FindBy(xpath = "//*[@id=\"input\']")
 	public static WebElement userName;
 
-	public LoginObj(WebDriver driver) {           
-		this.driver = driver; 
-		PageFactory.initElements(driver, this);
-		}
+	public LoginObj() {
+		PageFactory.initElements(getDriver(), this);
+	}
 
 }

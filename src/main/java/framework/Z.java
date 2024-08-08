@@ -14,14 +14,14 @@ import org.openqa.selenium.support.ui.Wait;
 public class Z extends Base {
 
 	public static Wait<WebDriver> conditionalWait() {
-		Wait<WebDriver> wait = new FluentWait<WebDriver>(driver).withTimeout(Duration.ofSeconds(12))
+		Wait<WebDriver> wait = new FluentWait<WebDriver>(getDriver()).withTimeout(Duration.ofSeconds(12))
 				.pollingEvery(Duration.ofSeconds(1)).ignoring(NoSuchElementException.class)
 				.ignoring(ElementNotInteractableException.class);
 		return wait;
 	}
 
 	public Wait<WebDriver> conditionalWait(int timeout, int Polling) {
-		Wait<WebDriver> wait = new FluentWait<WebDriver>(driver).withTimeout(Duration.ofSeconds(timeout))
+		Wait<WebDriver> wait = new FluentWait<WebDriver>(getDriver()).withTimeout(Duration.ofSeconds(timeout))
 				.pollingEvery(Duration.ofSeconds(timeout)).ignoring(NoSuchElementException.class)
 				.ignoring(ElementNotInteractableException.class);
 		return wait;

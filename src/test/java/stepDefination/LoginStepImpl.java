@@ -17,14 +17,14 @@ public class LoginStepImpl extends Base{
 	public void i_am_google_page() {
 		String url = Lmt.getData("URL").toString();
 		System.out.println("ANAND Kumar " +url+ "_____________________________");
-		driver.get(url);
+		 getDriver().get(url);
 		  Lmt.getData("topping");
 		 System.out.println(Lmt.getData("topping"));
 //		Z.click("//*[@id=\"content\"]/div/div[1]/div/ul/li[1]/a/div");
 //		Z.click("//*[@id=\"content\"]/div/div[1]/div/ul/li[1]/a/div");  
 		 Z.click(LoginObj.userName);
-		WebElement elemement = driver.findElement(By.xpath("ASDFGH"));
-		 Actions act = new Actions(driver);
+		WebElement elemement = getDriver().findElement(By.xpath("ASDFGH"));
+		 Actions act = new Actions( getDriver());
 		 act.moveToElement(elemement).build().perform();
 		 act.clickAndHold(elemement).moveToElement(elemement).release();		
 		 act.keyDown("A");

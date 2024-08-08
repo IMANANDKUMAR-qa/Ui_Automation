@@ -21,7 +21,7 @@ public class Listners extends Base implements ITestListener {
 	@Attachment(value = "Screenshot", type = "image/png")
 	public byte[] captureScreenshot() {
 		// Take screenshot and return its bytes
-		return ((TakesScreenshot) Base.driver).getScreenshotAs(OutputType.BYTES);
+		return ((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.BYTES);
 	}
 
 	@Override
