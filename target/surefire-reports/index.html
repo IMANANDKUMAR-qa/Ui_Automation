@@ -135,7 +135,7 @@
                   </a> <!-- runScenario("Verify user should be able to login with valid creds", "Login Page") -->
                   <span class="method-name">runScenario</span>
                   <span class="parameters">("Verify user should be able to login with valid creds","Login Page")</span>
-                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for framework.Z$1@2a331b46 (tried for 12 second(s) with 1000 milliseconds interval)
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for framework.Z$1@2e0fd79f (tried for 12 second(s) with 1000 milliseconds interval)
 Build info: version: &apos;4.20.0&apos;, revision: &apos;866c76ca80&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.4&apos;
 Driver info: driver.version: unknown
@@ -157,7 +157,7 @@ Driver info: driver.version: unknown
                   </a> <!-- runScenario("Verify user should be able to login with valid creds", "Login Page") -->
                   <span class="method-name">runScenario</span>
                   <span class="parameters">("Verify user should be able to login with valid creds","Login Page")</span>
-                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for framework.Z$1@2a4f5433 (tried for 12 second(s) with 1000 milliseconds interval)
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for framework.Z$1@5386333f (tried for 12 second(s) with 1000 milliseconds interval)
 Build info: version: &apos;4.20.0&apos;, revision: &apos;866c76ca80&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.4&apos;
 Driver info: driver.version: unknown
@@ -184,16 +184,16 @@ Driver info: driver.version: unknown
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite thread-count=&quot;2&quot; name=&quot;Suite&quot; verbose=&quot;0&quot;&gt;
+&lt;suite thread-count=&quot;2&quot; parallel=&quot;tests&quot; name=&quot;Suite&quot; verbose=&quot;0&quot;&gt;
   &lt;parameter name=&quot;Env&quot; value=&quot;QMSSANITY&quot;/&gt;
   &lt;parameter name=&quot;Tags&quot; value=&quot;@ASD&quot;/&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;Test1&quot; verbose=&quot;0&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; parallel=&quot;tests&quot; name=&quot;Test1&quot; verbose=&quot;0&quot;&gt;
     &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
     &lt;classes&gt;
       &lt;class name=&quot;testRunner.L0Runner&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test1 --&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;Test2&quot; verbose=&quot;0&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; parallel=&quot;tests&quot; name=&quot;Test2&quot; verbose=&quot;0&quot;&gt;
     &lt;parameter name=&quot;browser&quot; value=&quot;edge&quot;/&gt;
     &lt;classes&gt;
       &lt;class name=&quot;testRunner.L0Runner&quot;/&gt;
@@ -251,16 +251,16 @@ data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'runScenario')
 data.setCell(0, 2, 'testRunner.L0Runner$CucumberRunnerTests')
-data.setCell(0, 3, 13914);
+data.setCell(0, 3, 13889);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'runScenario')
 data.setCell(1, 2, 'testRunner.L0Runner$CucumberRunnerTests')
-data.setCell(1, 3, 13609);
+data.setCell(1, 3, 13886);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 27 seconds</span>
+              <span class="suite-total-time">Total running time: 17 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -292,52 +292,52 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-class before">
-                <span class="method-name">setUpClass(org.testng.TestRunner@340a8894)</span>
-                <span class="method-start">76 ms</span>
+                <span class="method-name">setUpClass(org.testng.TestRunner@1e44b638)</span>
+                <span class="method-start">70 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-class before">
+                <span class="method-name">setUpClass(org.testng.TestRunner@7393222f)</span>
+                <span class="method-start">70 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMrthod(chrome)</span>
-                <span class="method-start">406 ms</span>
+                <span class="method-start">402 ms</span>
               </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">runScenario("Verify user should be able to login with valid creds", "Login Page")</span>
-                <span class="method-start">8161 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">afterMrthod</span>
-                <span class="method-start">22200 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-class after">
-                <span class="method-name">tearDownClass</span>
-                <span class="method-start">22954 ms</span>
-              </div> <!-- configuration-class after -->
-              <div class="configuration-class before">
-                <span class="method-name">setUpClass(org.testng.TestRunner@7a8b9166)</span>
-                <span class="method-start">23010 ms</span>
-              </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMrthod(edge)</span>
-                <span class="method-start">23021 ms</span>
+                <span class="method-start">402 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">runScenario("Verify user should be able to login with valid creds", "Login Page")</span>
-                <span class="method-start">24480 ms</span>
+                <span class="method-start">1791 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("Verify user should be able to login with valid creds", "Login Page")</span>
+                <span class="method-start">1791 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMrthod</span>
-                <span class="method-start">38208 ms</span>
+                <span class="method-start">15793 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMrthod</span>
+                <span class="method-start">15809 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">39449 ms</span>
+                <span class="method-start">16714 ms</span>
+              </div> <!-- configuration-class after -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDownClass</span>
+                <span class="method-start">17070 ms</span>
               </div> <!-- configuration-class after -->
               <div class="configuration-suite after">
                 <span class="method-name">afterSuite</span>
-                <span class="method-start">39466 ms</span>
+                <span class="method-start">17089 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

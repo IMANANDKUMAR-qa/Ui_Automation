@@ -1,17 +1,17 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 39.94 s <<< FAILURE! - in TestSuite
-testRunner.L0Runner$CucumberRunnerTests.runScenario["Verify user should be able to login with valid creds", "Login Page"](1)  Time elapsed: 13.921 s  <<< FAILURE!
+Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 17.492 s <<< FAILURE! - in TestSuite
+testRunner.L0Runner$CucumberRunnerTests.runScenario["Verify user should be able to login with valid creds", "Login Page"](1)  Time elapsed: 13.893 s  <<< FAILURE!
 org.openqa.selenium.TimeoutException: 
-Expected condition failed: waiting for framework.Z$1@2a331b46 (tried for 12 second(s) with 1000 milliseconds interval)
+Expected condition failed: waiting for framework.Z$1@2e0fd79f (tried for 12 second(s) with 1000 milliseconds interval)
 Build info: version: '4.20.0', revision: '866c76ca80'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.4'
 Driver info: driver.version: unknown
 
-testRunner.L0Runner$CucumberRunnerTests.runScenario["Verify user should be able to login with valid creds", "Login Page"](1)  Time elapsed: 13.618 s  <<< FAILURE!
+testRunner.L0Runner$CucumberRunnerTests.runScenario["Verify user should be able to login with valid creds", "Login Page"](1)  Time elapsed: 13.894 s  <<< FAILURE!
 org.openqa.selenium.TimeoutException: 
-Expected condition failed: waiting for framework.Z$1@2a4f5433 (tried for 12 second(s) with 1000 milliseconds interval)
+Expected condition failed: waiting for framework.Z$1@5386333f (tried for 12 second(s) with 1000 milliseconds interval)
 Build info: version: '4.20.0', revision: '866c76ca80'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.4'
 Driver info: driver.version: unknown

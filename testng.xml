@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<suite name="Suite" parallel="test" thread-count="2">
+<suite name="Suite" parallel="tests" thread-count="2">
 	<parameter name="Tags" value="${Tags}" />
 	<parameter name="Env" value="${Env}" />
 	<parameter name="Env" value="${Tenant}" />
